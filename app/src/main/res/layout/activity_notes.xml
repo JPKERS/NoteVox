@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_blue"
+    android:padding="16dp">
+
+    <!-- Paramètres (Gear Icon) -->
+    <ImageView
+        android:id="@+id/settings_icon"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/ic_settings"
+        android:contentDescription="Settings Icon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp" />
+
+    <!-- Titre principal -->
+
+    <!-- Bannière avec Note -->
+
+    <TextView
+        android:id="@+id/title_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="NoteVox"
+        android:textColor="@android:color/black"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.397"
+        app:layout_constraintStart_toEndOf="@id/settings_icon"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Zone d'entrée utilisateur -->
+
+    <!-- Boutons alignés horizontalement sous EditText -->
+    <TextView
+        android:id="@+id/note_banner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="4dp"
+        android:text="NOTE 1"
+        android:textColor="@android:color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.488"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title_text" />
+
+    <EditText
+        android:id="@+id/input_note"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="36dp"
+
+        android:gravity="top|start"
+        android:hint="Enter your note here..."
+        android:inputType="textMultiLine"
+        android:padding="12dp"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/note_banner" />
+
+    <LinearLayout
+        android:id="@+id/buttons_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="276dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/input_note">
+
+        <!-- Bouton Pause -->
+
+        <!-- Bouton Enregistrement -->
+
+        <ImageView
+            android:id="@+id/pause_button"
+            android:layout_width="104dp"
+            android:layout_height="60dp"
+            android:layout_marginEnd="8dp"
+            android:contentDescription="Pause Button"
+            android:src="@drawable/pauss" />
+
+        <!-- Bouton Arrêt -->
+        <ImageView
+            android:id="@+id/record_button"
+            android:layout_width="103dp"
+            android:layout_height="60dp"
+
+            android:layout_marginEnd="8dp"
+            android:contentDescription="Record Button"
+            android:src="@drawable/mii" />
+
+        <ImageView
+            android:id="@+id/stop_button"
+            android:layout_width="99dp"
+            android:layout_height="60dp"
+            android:contentDescription="Stop Button"
+            android:src="@drawable/sav" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
